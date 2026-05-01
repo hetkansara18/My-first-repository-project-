@@ -5,7 +5,7 @@ import os
 
 # The Decorator Function (Logger)
 def log_action(func):
-    """Decorator that logs the start and end of a function call."""
+    "Decorator that logs the start and end of a function call"
     def wrapper(*args, **kwargs):
         print(f"--- [LOG]: Execution Started: {func.__name__} ---")
         result = func(*args, **kwargs)  # Executing the original function
@@ -21,7 +21,7 @@ class ProjectManager:
 
     @log_action
     def create_directories(self, folder_list):
-        """Creates multiple directories based on a provided list."""
+        "Creates multiple directories based on a provided list"
         for folder in folder_list:
             if not os.path.exists(folder):
                 os.makedirs(folder)
